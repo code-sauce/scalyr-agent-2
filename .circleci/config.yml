@@ -10,7 +10,6 @@ jobs:
       - image: circleci/python:2.7-jessie-browsers
     steps:
       - checkout
-      - run: pip install -r dev-requirements.txt
 
   test:
     working_directory: ~/scalyr-agent-2
