@@ -8,7 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:2.7.9
+      - image: circleci/python:2.7-jessie-browsers
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -19,11 +19,30 @@ jobs:
 
     steps:
       - checkout
+      - run:
+          name: Activate VirtualEnv
+          command: python -m venv venv; . venv/bin/activate
+      - run:
+          name: Install Dev requirements
+          command: pip install -r dev-requirements.txt
 
-      - run: python -m venv venv; . venv/bin/activate
-      - run: pip install -r dev-requirements.txt
-      - run: python run_tests.py
+  test:
+    docker:
+      - image: circleci/python:2.7-jessie-browsers
 
-test:
-  override:
-    - python run_tests.py
+    working_directory: ~/scalyr-agent-2
+
+    steps:
+      - checkout
+
+      - run:
+          name: UnitTests
+          command: python run_tests.py
+
+      - store_artifacts:
+          path: test-results.xml
+          prefix: tests
+
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
