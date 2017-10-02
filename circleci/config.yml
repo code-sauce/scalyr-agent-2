@@ -23,3 +23,7 @@ jobs:
       - run: python -m venv venv; . venv/bin/activate
       - run: pip install -r dev-requirements.txt
       - run: python run_tests.py
+
+test:
+  override:
+    - python run_tests.py
