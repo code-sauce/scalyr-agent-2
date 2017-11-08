@@ -12,7 +12,6 @@ before_install:
   - sudo apt-get install curl
   - sudo apt-get install software-properties-common
   - sudo apt-get install docker
-  - sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
   - sudo apt-get install docker.io
 
 install:
