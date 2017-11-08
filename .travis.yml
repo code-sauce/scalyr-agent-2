@@ -9,6 +9,8 @@ install:
   - pip install pytest
   - docker build -t codesauce/scalyragent:$TRAVIS_BUILD_NUMBER .
   - docker ps -a
+before_script:
+  - source ~/virtualenv/python2.6/bin/activate
 script:
   - pytest
 after_success:
