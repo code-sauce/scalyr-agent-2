@@ -13,10 +13,10 @@ matrix:
     script: pytest
   - sudo: required
     language: python
-    before_install:
+    install:
+    - pip install pytest
     - docker build -t codesauce/scalyragent:$TRAVIS_BUILD_NUMBER .
     - docker ps -a
-    install: pip install pytest
     script: pytest
     after_success:
     - if [ "$TRAVIS_BRANCH" == "travisci" ]; then docker login -u="$DOCKER_USERNAME"
