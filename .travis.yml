@@ -7,7 +7,7 @@ python:
 
 before_install:
   - sudo apt-get update
-  - apt-get -y install docker.io
+  - sudo apt-get -y install docker.io
 
 install:
   - pip install pytest
