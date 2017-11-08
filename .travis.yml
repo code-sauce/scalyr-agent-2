@@ -1,4 +1,6 @@
 dist: precise
+sudo: required
+
 matrix:
   include:
   - language: python
