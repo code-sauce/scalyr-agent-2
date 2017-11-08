@@ -7,20 +7,7 @@ python:
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install apt-transport-https
-  - sudo apt-get install ca-certificates
-  - sudo apt-get install curl
-  - sudo apt-get install software-properties-common
-  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-  - sudo apt-key fingerprint 0EBFCD88
-  - lsb_release -cs
-  - uname -a
-  - sudo add-apt-repository 'deb https://download.docker.com/linux/ubuntu trusty stable'
-  - cat /etc/apt/sources.list
-  - ls /etc/apt/sources.list.d
-  - sudo apt-get update
-  - sudo apt-get install docker-ce
-  - sudo docker run hello-world
+  - sudo apt-get install docker.io
 
 install:
   - pip install pytest
@@ -35,3 +22,19 @@ env:
   global:
   - secure: NgqF+LcS8zMblCiePjPo6Rh16hreJgy755qDX3DRrzMVwtva8EjvJL4+KjuFhBlHSbN9yDUw3ap2AeeZgzgSdiOjMem8ZVTAHcD3pi87KgXJvtOkDbcJkRGHrtzezYJmeAf2VVqxGQgC80qZNhPNTaqEwVJ52y1bXE21G1e7+CmUXQkfOV91X+AvjdzBY/noKIrhQJ+23fXNIhh5bfQpcG+v9IMccMBqEqSLj5rkNM74ehg15wdIR9VJC3/O+v2PtoUsNjJcC0pBfr6nh9TljP3CPrcqLTrxUffUT4+jZjF88U1HLe7MOo6IieI52GeV+GcE1b5XyEXAzw3w8pIuYdUEbrq/3lt9b0+wrO7SVFHxg8K33B6p7kpE+Kbjcx6HvkvYMCyYs1UGUik33e5edJxHiWtjI5pg2vaWeyeFGSmHFPiLpbGBr2ErC7EULpbS5pj327AYZtNJYzmIhv+eRZwlsS10w+uy0ApYH2Pat27jE7z2Zvrp0olVRZpxXOs/ggX4ye0h11A2AeNhP7loC+MTvSyjOe9k6xs9qAQfLoGQBEKWK+1A53BeE4Yb6quJldvp5hXGFurQROzi1dwjdE3geKgRSPnaCbmRBvvRrWVPYpRS3kuYRKDdsJtTLNRXSjlVDqwSESbhOOoYwhmbb9RKyRQeZ66cp9z5f9UdADA=
   - secure: GKvpRPdwFxi4Jark0WZ8Le0PXPiUWe3mPUCEpIfK/3s2jsHjOSOMQHaA4xmbpQZwgOXV2in5r3HMSQu1e6yOC//BitX7AOH0Z4hhoOGDogn4QEuiISKMsr0GV6cQ39dckmpUErceEWHVLJPQA6udwGBBinrvJ7I1kD0gb8/FL8Lrwg1RvntvWVaVKPY/MwuiiWKdmzgVU+E0JvFD7uO0OGXdcaLERVi1S1lnPmxVYm70sh9E4PephJqDZ8V9EclU90EdSbdd3VzzWmqYLdwawMbg1xobGljoy0X5cePBIESUFmQQZT2BnXPkWRd3BZ6BZ6cJwoM6JiZZlXST7c12yvw2Nh3DaLc/ffz/aTF3edb5Zfw7Hv7lvxTddNs3CVliWr0tEChPW6JzxDJu6C79A2fb8LelCFlKTx9wDEoCF10Oi1Laaxwct7HJgIxoPj/a0KpusnzRUf+oXGxwRHd5lrSTcgYw4dKMS7ZCwpZPlriN/Plu5Vaux3wBcSrGZUbKhYL8Y1fCovoD7nj80ixO3UPnir9133Xgc5aQ+qcqBMcdY0h1x/VFrJ9MWZx+GV2ycCGJA7K3F3wgw5e9omjH6zyt5LUbzJ1Lnym3/Ur2bnUSixsy8hgn7y+TwxgG1Va3R8/6gTPH7iZzHABHusYf/atbdQc7YYs0/Onlu1jA4pI=
+
+
+#  - sudo apt-get install apt-transport-https
+#  - sudo apt-get install ca-certificates
+#  - sudo apt-get install curl
+#  - sudo apt-get install software-properties-common
+#  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#  - sudo apt-key fingerprint 0EBFCD88
+#  - lsb_release -cs
+#  - uname -a
+#  - sudo add-apt-repository 'deb http://download.docker.com/linux/ubuntu trusty stable'
+#  - cat /etc/apt/sources.list
+#  - ls /etc/apt/sources.list.d
+#  - sudo apt-get update
+#  - sudo apt-get install docker-ce
+#  - sudo docker run hello-world
