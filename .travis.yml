@@ -7,6 +7,11 @@ python:
 
 before_install:
   - sudo apt-get update
+  - sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+  - sudo apt-get install apt-transport-https
+  - sudo apt-get install ca-certificates
+  - sudo apt-get install curl
+  - sudo apt-get install software-properties-common
   - sudo apt-get install docker.io
 
 install:
