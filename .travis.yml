@@ -12,7 +12,7 @@ before_install:
   - sudo apt-get install curl
   - sudo apt-get install software-properties-common
   - sudo apt-get install docker
-  - sudo apt-get install docker.io
+  - sudo apt-get install docker-ce --assume-yes
 
 install:
   - pip install pytest
