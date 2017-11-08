@@ -1,6 +1,4 @@
-group: edge
-sudo: true
-services: docker
+dist: trusty
 language: python
 python:
   - "2.6"
