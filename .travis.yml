@@ -15,10 +15,10 @@ before_install:
   - sudo apt-key fingerprint 0EBFCD88
   - lsb_release -cs
   - uname -a
+  - sudo add-apt-repository \
+     "deb http://download.docker.com/linux/ubuntu trusty stable"
   - cat /etc/apt/sources.list
   - ls /etc/apt/sources.list.d
-  - sudo add-apt-repository \
-     "deb [arch=amd64] https://download.docker.com/linux/ubuntu trusty stable"
   - sudo apt-get update
   - sudo apt-get install docker-ce
   - sudo docker run hello-world
