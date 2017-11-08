@@ -1,3 +1,4 @@
+dist: precise
 matrix:
   include:
   - language: python
