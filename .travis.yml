@@ -24,6 +24,12 @@ script:
 after_success:
     - if [ "$TRAVIS_BRANCH" == "travisci" ]; then docker login -u="$DOCKER_USERNAME"
       -p="$DOCKER_PASSWORD"; docker push codesauce/scalyragent:$TRAVIS_BUILD_NUMBER; fi
+notifications:
+  email:
+    recipients:
+      - saurabh@scalyr.com
+    on_success: always # default: change
+    on_failure: always # default: always
 env:
   global:
   - secure: NgqF+LcS8zMblCiePjPo6Rh16hreJgy755qDX3DRrzMVwtva8EjvJL4+KjuFhBlHSbN9yDUw3ap2AeeZgzgSdiOjMem8ZVTAHcD3pi87KgXJvtOkDbcJkRGHrtzezYJmeAf2VVqxGQgC80qZNhPNTaqEwVJ52y1bXE21G1e7+CmUXQkfOV91X+AvjdzBY/noKIrhQJ+23fXNIhh5bfQpcG+v9IMccMBqEqSLj5rkNM74ehg15wdIR9VJC3/O+v2PtoUsNjJcC0pBfr6nh9TljP3CPrcqLTrxUffUT4+jZjF88U1HLe7MOo6IieI52GeV+GcE1b5XyEXAzw3w8pIuYdUEbrq/3lt9b0+wrO7SVFHxg8K33B6p7kpE+Kbjcx6HvkvYMCyYs1UGUik33e5edJxHiWtjI5pg2vaWeyeFGSmHFPiLpbGBr2ErC7EULpbS5pj327AYZtNJYzmIhv+eRZwlsS10w+uy0ApYH2Pat27jE7z2Zvrp0olVRZpxXOs/ggX4ye0h11A2AeNhP7loC+MTvSyjOe9k6xs9qAQfLoGQBEKWK+1A53BeE4Yb6quJldvp5hXGFurQROzi1dwjdE3geKgRSPnaCbmRBvvRrWVPYpRS3kuYRKDdsJtTLNRXSjlVDqwSESbhOOoYwhmbb9RKyRQeZ66cp9z5f9UdADA=
