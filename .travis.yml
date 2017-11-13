@@ -1,4 +1,4 @@
-dist: precise
+# dist: precise
 sudo: required
 services: docker
 language: python
