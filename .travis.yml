@@ -5,17 +5,15 @@ python:
   - "2.6"
   - "2.7"
 
-
-before_install:
-  - sudo apt-get update
-  - sudo apt-get install apt-transport-https
-  - sudo apt-get install ca-certificates
-  - sudo apt-get install curl
-  - uname -a
-  - sudo apt-get install software-properties-common
-  - sudo apt-get install docker
-  - sudo apt-get install docker-ce --assume-yes
-
+# before_install:
+#   - sudo apt-get update
+#   - sudo apt-get install apt-transport-https
+#   - sudo apt-get install ca-certificates
+#   - sudo apt-get install curl
+#   - uname -a
+#   - sudo apt-get install software-properties-common
+#   - sudo apt-get install docker
+#   - sudo apt-get install docker-ce --assume-yes
 install:
   - pip install pytest
   - docker build -t codesauce/scalyragent:$TRAVIS_BUILD_NUMBER .
