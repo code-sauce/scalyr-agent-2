@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: scalyr-agent
-        image: scalyr/scalyr-k8s-agent:latest
+        image: codesauce/scalyr-k8s-agent:latest
         imagePullPolicy: Always
         env:
           - name: SCALYR_API_KEY
