@@ -3,6 +3,7 @@
 # Check https://circleci.com/docs/2.0/language-python/ for more details
 #
 version: 2
+
 jobs:
   test:
     working_directory: ~/scalyr-agent-2
@@ -10,6 +11,7 @@ jobs:
       - image: circleci/python:2.7-jessie-browsers
 
     working_directory: ~/scalyr-agent-2
+
 
     steps:
       - checkout
