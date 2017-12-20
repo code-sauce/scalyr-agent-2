@@ -73,4 +73,5 @@ class DaemonApiMixin(object):
 
     def version(self, api_version=True):
         url = self._url("/version", versioned_api=api_version)
+        print "VERSION URL: ", url
         return self._result(self._get(url), json=True)
