@@ -42,7 +42,7 @@ class Client(
                  user_agent=constants.DEFAULT_USER_AGENT,
                  num_pools=constants.DEFAULT_NUM_POOLS):
         super(Client, self).__init__()
-
+        print "BASE URL: ", base_url
         if tls and not base_url:
             raise errors.TLSParameterError(
                 'If using TLS, the base_url argument must be provided.'
@@ -91,6 +91,7 @@ class Client(
             self.base_url = base_url
 
         # version detection needs to be after unix adapter mounting
+        print "VERSION: ", version
         if version is None:
             self._version = constants.DEFAULT_DOCKER_API_VERSION
         elif isinstance(version, six.string_types):
@@ -112,6 +113,7 @@ class Client(
 
     def _retrieve_server_version(self):
         try:
+            print "self.version: ", self.version(api_version=False)
             return self.version(api_version=False)["ApiVersion"]
         except KeyError:
             raise errors.DockerException(
